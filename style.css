@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    background-size: 400% 400%;
+    min-height: 200vh;
+    overflow-x: hidden;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    margin: 0 auto;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.heart {
+    font-size: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.photo-frame {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-frame:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff6b9d, #ff8e8e);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4);
+}
+
+.btn.secondary {
+    background: linear-gradient(45deg, #a8e6cf, #b8f2e6);
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.letter-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.scroll-prompt {
+    font-size: 1.8rem;
+    color: #ff6b9d;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 40px;
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.love-letter {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    border-left: 5px solid #ff6b9d;
+}
+
+.letter-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #ff6b9d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.letter-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.letter-content strong {
+    color: #ff6b9d;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+}
+
+.final-message {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+}
+
+.message-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+}
+
+.message-box p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #333;
+    font-style: italic;
+}
+
+.message-box strong {
+    color: #ff6b9d;
+    font-size: 1.5rem;
+}
+
+/* Collage page styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff6b9d;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.header p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.love-note {
+    text-align: center;
+    margin-top: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.love-note p {
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 3rem; }
+    .message { font-size: 1.2rem; }
+    .heart { font-size: 80px; }
+    
+    .love-letter {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .letter-title {
+        font-size: 2.5rem;
+    }
+    
+    .letter-content p {
+        font-size: 1.1rem;
+    }
+    
+    .collage-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
